@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="theme-color" content="#f7f5f0">
+    <title>Sandro's Shop - Everyday objects, considered</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html">Sandro's Shop<span class="logo-dot">.</span></a>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+
+            <button id="searchButton">
+                Search
+            </button>
+        </div>
+
+        <!-- CART -->
+        <nav class="header-actions">
+            <a class="account-link" href="login.html">Sign in</a>
+        <div class="cart-link">
+            <a href="cart.html">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </a>
+        </div>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="page-container">
+
+        <!-- SIDEBAR FILTERS -->
+        <aside class="sidebar">
+
+            <h2>Refine by</h2>
+
+
+            <!-- CATEGORY -->
+            <div class="filter-group">
+
+                <label for="categoryFilter">
+                    Category
+                </label>
+
+                <select id="categoryFilter">
+
+                    <option value="">
+                        All categories
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- BRAND -->
+            <div class="filter-group">
+
+                <label for="brandFilter">
+                    Brand
+                </label>
+
+                <select id="brandFilter">
+
+                    <option value="">
+                        All brands
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- MIN PRICE -->
+            <div class="filter-group">
+
+                <label for="minPrice">
+                    Minimum price
+                </label>
+
+                <input
+                    type="number"
+                    id="minPrice"
+                    placeholder="Min price"
+                    min="0"
+                >
+
+            </div>
+
+
+            <!-- MAX PRICE -->
+            <div class="filter-group">
+
+                <label for="maxPrice">
+                    Maximum price
+                </label>
+
+                <input
+                    type="number"
+                    id="maxPrice"
+                    placeholder="Max price"
+                    min="0"
+                >
+
+            </div>
+
+
+            <!-- RATING -->
+            <div class="filter-group">
+
+                <label for="ratingFilter">
+                    Rating
+                </label>
+
+                <select id="ratingFilter">
+
+                    <option value="">
+                        All ratings
+                    </option>
+
+                    <option value="1">
+                        1+
+                    </option>
+
+                    <option value="2">
+                        2+
+                    </option>
+
+                    <option value="3">
+                        3+
+                    </option>
+
+                    <option value="4">
+                        4+
+                    </option>
+
+                    <option value="5">
+                        5
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FILTER BUTTONS -->
+            <div class="filter-buttons">
+
+                <button id="filterButton">
+                    Apply Filters
+                </button>
+
+                <button id="clearButton">
+                    Clear
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- PRODUCTS SECTION -->
+        <main class="products-section">
+
+            <div class="section-heading"><div><p class="eyebrow">A LITTLE MORE THOUGHTFUL</p><h1>Everyday essentials</h1></div><p class="section-note">Useful things, made to last.</p></div>
+
+            <!-- PRODUCTS WILL APPEAR HERE -->
+            <div id="products"></div>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="auth-ui.js"></script>
+    <script src="cart-service.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

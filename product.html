@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product — Sandro's Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html">Sandro's Shop<span class="logo-dot">.</span></a>
+        </div>
+
+        <nav class="header-actions">
+            <a href="index.html">Shop</a>
+            <a href="cart.html">
+                Bag
+                <span id="cartCount">0</span>
+            </a>
+            <a class="account-link" href="login.html">Sign in</a>
+        </nav>
+
+    </header>
+
+
+    <main class="product-page">
+
+        <div id="productDetails">
+            Loading product...
+        </div>
+
+
+        <div class="tabs">
+
+            <button id="detailsTab" class="tab-button active">
+                Details
+            </button>
+
+            <button id="reviewTab" class="tab-button">
+                Review
+            </button>
+
+        </div>
+
+
+        <section id="detailsSection" class="tab-content">
+
+            <h2>Product Details</h2>
+
+            <div id="detailsContent"></div>
+
+        </section>
+
+
+        <section id="reviewSection" class="tab-content hidden">
+
+            <div class="review-header">
+
+                <h2>Reviews</h2>
+
+                <button id="openReviewButton" class="primary-button">
+                    Rate Product
+                </button>
+
+            </div>
+
+            <div id="reviewsList"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Review Modal -->
+
+    <div id="reviewModal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-button" type="button" aria-label="Close">
+                ×
+            </button>
+
+            <h2>Rate Product</h2>
+
+
+            <label>Rating</label>
+
+            <div id="ratingStars" class="rating-input">
+
+                <button type="button" data-rating="1" aria-label="1 star">★</button>
+                <button type="button" data-rating="2" aria-label="2 stars">★</button>
+                <button type="button" data-rating="3" aria-label="3 stars">★</button>
+                <button type="button" data-rating="4" aria-label="4 stars">★</button>
+                <button type="button" data-rating="5" aria-label="5 stars">★</button>
+
+            </div>
+
+
+            <label for="reviewFirstName">
+                First Name
+            </label>
+
+            <input
+                type="text"
+                id="reviewFirstName"
+                placeholder="First name"
+            >
+
+
+            <label for="reviewLastName">
+                Last Name
+            </label>
+
+            <input
+                type="text"
+                id="reviewLastName"
+                placeholder="Last name"
+            >
+
+
+            <label for="reviewText">
+                Review
+            </label>
+
+            <textarea
+                id="reviewText"
+                placeholder="Write your review..."
+            ></textarea>
+
+
+            <button id="saveReview" class="primary-button">
+                OK
+            </button>
+
+            <p id="reviewMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="auth-ui.js"></script>
+    <script src="cart-service.js"></script>
+    <script src="product.js"></script>
+
+</body>
+</html>

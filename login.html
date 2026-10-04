@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign in — Sandro's Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">Sandro's Shop<span class="logo-dot">.</span></a>
+        </div>
+
+        <nav class="header-actions">
+            <a href="index.html">Shop</a>
+            <a href="cart.html">Bag</a>
+            <a class="account-link" href="login.html">Sign in</a>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+
+        <div class="auth-box">
+
+            <p class="eyebrow">WELCOME BACK</p><h1>Sign in</h1>
+
+            <form id="loginForm">
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Your password"
+                    required
+                >
+
+                <button type="submit" class="primary-button">
+                    Sign in
+                </button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+            <section id="verificationPanel" class="verification-panel hidden" aria-live="polite">
+                <p>Your account needs email verification before you can use the shop.</p>
+                <button id="resendVerificationButton" type="button" class="secondary-button">Send verification email again</button>
+                <p id="verificationMessage"></p>
+            </section>
+
+            <p class="auth-switch">New to Everrest? <a href="signup.html">Create an account</a></p>
+            <a href="index.html">Back to shop</a>
+
+        </div>
+
+    </main>
+
+   <script src="auth-ui.js"></script>
+   <script src="login.js"></script>
+
+</body>
+</html>

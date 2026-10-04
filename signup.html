@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account — Sandro's Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html">Sandro's Shop<span class="logo-dot">.</span></a></div>
+        <nav class="header-actions"><a href="index.html">Shop</a><a href="cart.html">Bag <span id="cartCount">0</span></a><a class="account-link" href="login.html">Sign in</a></nav>
+    </header>
+    <main class="auth-page">
+        <section class="auth-box">
+            <p class="eyebrow">A BETTER WAY TO SHOP</p>
+            <h1>Create your account</h1>
+            <p class="auth-intro">Join Sandro's Shop to save your bag and leave product reviews.</p>
+            <form id="signupForm">
+                <div class="form-row"><div><label for="firstName">First name</label><input id="firstName" autocomplete="given-name" required></div><div><label for="lastName">Last name</label><input id="lastName" autocomplete="family-name" required></div></div>
+                <label for="age">Age</label><input type="number" id="age" min="13" max="120" required>
+                <label for="email">Email</label><input type="email" id="email" autocomplete="email" placeholder="you@example.com" required>
+                <label for="password">Password</label><input type="password" id="password" autocomplete="new-password" minlength="8" required>
+                <label for="address">Address</label><input id="address" autocomplete="street-address" minlength="5" required>
+                <label for="phone">Phone</label><input id="phone" type="tel" autocomplete="tel" placeholder="+995555123456" pattern="[+]?[0-9 ()-]{8,20}" required>
+                <label for="zipcode">Postal code</label><input id="zipcode" autocomplete="postal-code" placeholder="0100" pattern="[0-9A-Za-z -]{3,10}" required>
+                <label for="avatar">Avatar image URL</label><input id="avatar" type="url" value="https://api.dicebear.com/9.x/initials/svg?seed=Sandro's Shop" required>
+                <label for="gender">Gender</label><select id="gender" required><option value="">Choose one</option><option value="MALE">Male</option><option value="FEMALE">Female</option></select>
+                <button type="submit" class="primary-button">Create account</button>
+            </form>
+            <p id="signupMessage" role="status"></p>
+            <section id="verificationPanel" class="verification-panel hidden" aria-live="polite">
+                <p>Check your inbox and follow the Sandro's Shop verification link before signing in.</p>
+                <button id="resendVerificationButton" type="button" class="secondary-button">Send verification email again</button>
+                <p id="verificationMessage"></p>
+            </section>
+            <p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+        </section>
+    </main>
+    <script src="auth-ui.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>

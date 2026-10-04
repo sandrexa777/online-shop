@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your bag — Sandro's Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html">Sandro's Shop<span class="logo-dot">.</span></a>
+        </div>
+
+        <nav class="header-actions">
+            <a href="index.html">Shop</a>
+
+            <a href="cart.html">
+                Bag
+                <span id="cartCount">0</span>
+            </a>
+
+            <a class="account-link" href="login.html">
+                Sign in
+            </a>
+        </nav>
+
+    </header>
+
+
+    <main class="cart-page">
+
+        <p class="eyebrow">YOUR SELECTION</p><h1>Your bag</h1>
+
+
+        <p id="cartMessage"></p>
+
+
+        <div id="cartItems"></div>
+
+
+        <div class="cart-summary">
+
+            <h2>
+                Total:
+                <span id="cartTotal">0.00</span> GEL
+            </h2>
+
+            <p>
+                Items:
+                <span id="totalQuantity">0</span>
+            </p>
+
+
+            <button
+                id="clearCartButton"
+                class="secondary-button"
+            >
+                Clear Cart
+            </button>
+
+
+            <button
+                id="checkoutButton"
+                class="primary-button"
+            >
+                Place order
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="auth-ui.js"></script>
+    <script src="cart.js"></script>
+
+</body>
+</html>
